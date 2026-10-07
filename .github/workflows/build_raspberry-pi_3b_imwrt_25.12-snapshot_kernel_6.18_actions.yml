@@ -47,8 +47,8 @@ env:
   ## hardware & repo info
   TARGET_MODEL:         raspberry-pi_3b
   TARGET_CHIPS:         bcm2710
-  TARGET_MEDIA:         2g_tf
-  OUTPUT_FILES:         solidwrt-25.12-ss-raspberry-pi_3b-2gb_tf
+  TARGET_MEDIA:         4g_tf
+  OUTPUT_FILES:         solidwrt-25.12-ss-raspberry-pi_3b-4gb_tf
   TZ: "Asia/Tokyo"
   ## github token
   GITHUB_TOKEN:         ${{ secrets.ACCESS_TOKEN }}
