@@ -9,7 +9,7 @@
 # 説明: GitHub Actionsのモジュール化を活用し、プライバシーとセキュリティを確保したOpenWrtビルド。
 #
 
-name: Build rk3318-box imwrt 25.12-snapshot kernel 6.12 actions.
+name: Build rk3318-box imwrt 25.12-snapshot kernel 6.18 actions.
 
 on:
   workflow_dispatch:
@@ -18,7 +18,7 @@ on:
       restore_config:
         description: 'RESTORE_BAKCONF. 🇯🇵 環境設定復元'
         type: boolean
-        default: true
+        default: false
       upload_firmware:
         description: 'UPLOAD_ARTIFACT. 🇯🇵 成果物の保存'
         type: boolean
@@ -128,7 +128,7 @@ jobs:
         repository: ${{ env.RUN_REF_REPO }}
         retain_days: 0
         keep_minimum_runs: 0
-        delete_workflow_pattern: "rk3318-box imwrt 25.12-snapshot kernel 6.12"
+        delete_workflow_pattern: "rk3318-box imwrt 25.12-snapshot kernel 6.18"
 
     - name: Check Server Performance (サーバー性能の確認)
       id: check_env
